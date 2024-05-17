@@ -14,6 +14,10 @@ const Counter = () => {
   const decrementHandler = () => {
     dispatch({ type: "decrement" });
   };
+
+  const up = () => {
+    dispatch({ type: "up", amount: 5 });
+  };
   const toggleCounterHandler = () => {};
   // 리덕스가 관리하는 상태를 받는것.
 
@@ -24,6 +28,7 @@ const Counter = () => {
       <div>
         <button onClick={incrementHandler}>increment</button>
         <button onClick={decrementHandler}>decrement</button>
+        <button onClick={up}>increase5</button>
       </div>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
     </main>

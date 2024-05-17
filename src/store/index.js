@@ -7,6 +7,12 @@ const counterReducer = (state = { counter: 0 }, action) => {
     };
   }
 
+  if (action.type === "up") {
+    return {
+      counter: state.counter + action.amount,
+    };
+  }
+
   // eslint-disable-next-line no-unreachable
   if (action.type === "decrement") {
     return {
