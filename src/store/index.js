@@ -5,14 +5,15 @@ const counterReducer = (state = { counter: 0 }, action) => {
     return {
       counter: state.counter + 1,
     };
-
-    // eslint-disable-next-line no-unreachable
-    if (action.type === "decrement") {
-      return {
-        counter: state.counter - 1,
-      };
-    }
   }
+
+  // eslint-disable-next-line no-unreachable
+  if (action.type === "decrement") {
+    return {
+      counter: state.counter - 1,
+    };
+  }
+
   return state;
 };
 
